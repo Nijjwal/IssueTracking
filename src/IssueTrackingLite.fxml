@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../crud.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <SplitPane dividerPositions="0.2140468227424749" layoutX="21.0" layoutY="76.0" prefHeight="324.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="318.0">
+               <children>
+                  <TreeView fx:id="tree" layoutX="-32.0" layoutY="68.0" prefHeight="398.0" prefWidth="124.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="166.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <SplitPane dividerPositions="0.2803030303030303" orientation="VERTICAL" prefHeight="398.0" prefWidth="466.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <TableView fx:id="table" layoutX="49.0" layoutY="-32.0" prefHeight="107.0" prefWidth="464.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="C1" />
+                                  <TableColumn prefWidth="75.0" text="C2" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                      <AnchorPane fx:id="details" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <HBox fx:id="titleLine" layoutX="14.0" layoutY="11.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0">
+                                 <children>
+                                    <HBox fx:id="labels" layoutX="14.0" layoutY="12.0" minWidth="-Infinity">
+                                       <children>
+                                          <Hyperlink fx:id="project" layoutX="14.0" layoutY="12.0" text="PROJECT" />
+                                          <Label layoutX="84.0" layoutY="16.0" text="/" />
+                                          <Hyperlink fx:id="bugId" layoutX="96.0" layoutY="12.0" text="ID" />
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="synopsis" layoutX="112.0" layoutY="11.0" prefHeight="26.0" prefWidth="332.0" promptText="SYNOPSIS" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <Label layoutX="17.0" layoutY="37.0" text="DESCRIPTION" />
+                              <TextArea fx:id="descriptionValue" layoutX="17.0" layoutY="60.0" prefHeight="207.0" prefWidth="430.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="60.0" />
+                           </children></AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <ImageView fitHeight="76.0" fitWidth="135.0">
+         <image>
+            <Image url="@../../../Screenshot%202015-01-25%2006.34.14.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="407.0" layoutY="25.0" spacing="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Button fx:id="newIssue" layoutX="381.0" layoutY="25.0" mnemonicParsing="false" text="New" />
+            <Button fx:id="saveIssue" layoutX="454.0" layoutY="25.0" mnemonicParsing="false" style="-fx-font-size: 13;" stylesheets="@../../../crud.css" text="Save" />
+            <Button fx:id="deleteIssue" layoutX="528.0" layoutY="25.0" mnemonicParsing="false" text="Delete" />
+         </children>
+      </HBox>
+      <Label fx:id="messageBar" layoutX="176.0" layoutY="14.0" prefHeight="49.0" prefWidth="206.0" />
+   </children>
+</AnchorPane>
