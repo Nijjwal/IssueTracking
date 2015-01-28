@@ -5,9 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../crud.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../crud.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nijjwal.controller.MainController">
    <children>
-      <SplitPane dividerPositions="0.2140468227424749" layoutX="21.0" layoutY="76.0" prefHeight="324.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+      <SplitPane dividerPositions="0.2140468227424749" layoutX="21.0" layoutY="65.0" prefHeight="335.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="318.0">
                <children>
@@ -49,18 +49,18 @@
             </AnchorPane>
         </items>
       </SplitPane>
-      <ImageView fitHeight="76.0" fitWidth="135.0">
-         <image>
-            <Image url="@../../../Screenshot%202015-01-25%2006.34.14.png" />
-         </image>
-      </ImageView>
       <HBox layoutX="407.0" layoutY="25.0" spacing="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Button fx:id="newIssue" layoutX="381.0" layoutY="25.0" mnemonicParsing="false" text="New" />
+            <Button fx:id="newIssue" layoutX="381.0" layoutY="25.0" mnemonicParsing="false" onAction="#showGreeting" text="New" />
             <Button fx:id="saveIssue" layoutX="454.0" layoutY="25.0" mnemonicParsing="false" style="-fx-font-size: 13;" stylesheets="@../../../crud.css" text="Save" />
             <Button fx:id="deleteIssue" layoutX="528.0" layoutY="25.0" mnemonicParsing="false" text="Delete" />
          </children>
       </HBox>
       <Label fx:id="messageBar" layoutX="176.0" layoutY="14.0" prefHeight="49.0" prefWidth="206.0" />
+      <ImageView fitHeight="49.0" fitWidth="169.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/images.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
