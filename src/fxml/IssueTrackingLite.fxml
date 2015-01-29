@@ -15,7 +15,7 @@
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="166.0" SplitPane.resizableWithParent="false">
                <children>
-                  <SplitPane dividerPositions="0.2803030303030303" orientation="VERTICAL" prefHeight="398.0" prefWidth="466.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.16314199395770393" orientation="VERTICAL" prefHeight="398.0" prefWidth="466.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
@@ -32,16 +32,16 @@
                                  <children>
                                     <HBox fx:id="labels" layoutX="14.0" layoutY="12.0" minWidth="-Infinity">
                                        <children>
-                                          <Hyperlink fx:id="project" layoutX="14.0" layoutY="12.0" text="PROJECT" />
-                                          <Label layoutX="84.0" layoutY="16.0" text="/" />
-                                          <Hyperlink fx:id="bugId" layoutX="96.0" layoutY="12.0" text="ID" />
+                                          <Hyperlink fx:id="project" layoutX="14.0" layoutY="12.0" text="PROJECT ID" />
                                        </children>
                                     </HBox>
-                                    <TextField fx:id="synopsis" layoutX="112.0" layoutY="11.0" prefHeight="26.0" prefWidth="332.0" promptText="SYNOPSIS" HBox.hgrow="ALWAYS" />
+                                    <TextField fx:id="synopsis" layoutX="112.0" layoutY="11.0" prefHeight="26.0" prefWidth="306.0" promptText="SYNOPSIS" HBox.hgrow="ALWAYS" />
                                  </children>
                               </HBox>
-                              <Label layoutX="17.0" layoutY="37.0" text="DESCRIPTION" />
-                              <TextArea fx:id="descriptionValue" layoutX="17.0" layoutY="60.0" prefHeight="207.0" prefWidth="430.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="60.0" />
+                              <Label layoutX="17.0" layoutY="87.0" text="DESCRIPTION" />
+                              <TextArea fx:id="issueDescription" layoutX="17.0" layoutY="118.0" prefHeight="141.0" prefWidth="430.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="17.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="118.0" />
+                              <Label layoutX="17.0" layoutY="53.0" text="PROJECT TITLE" />
+                              <TextField fx:id="projectTitle" layoutX="136.0" layoutY="48.0" />
                            </children></AnchorPane>
                     </items>
                   </SplitPane>
@@ -51,12 +51,13 @@
       </SplitPane>
       <HBox layoutX="407.0" layoutY="25.0" spacing="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Button fx:id="newIssue" layoutX="381.0" layoutY="25.0" mnemonicParsing="false" onAction="#showGreeting" text="New" />
-            <Button fx:id="saveIssue" layoutX="454.0" layoutY="25.0" mnemonicParsing="false" style="-fx-font-size: 13;" stylesheets="@../../../crud.css" text="Save" />
-            <Button fx:id="deleteIssue" layoutX="528.0" layoutY="25.0" mnemonicParsing="false" text="Delete" />
+            <Button fx:id="newIssue" layoutX="381.0" layoutY="25.0" mnemonicParsing="false" onAction="#showGreeting" text="Show" />
+            <Button fx:id="saveIssue" layoutX="454.0" layoutY="25.0" mnemonicParsing="false" onAction="#saveIssue" style="-fx-font-size: 13;" stylesheets="@../../../crud.css" text="Save" />
+            <Button fx:id="deleteIssue" layoutX="528.0" layoutY="25.0" mnemonicParsing="false" onAction="#deleteIssue" text="Delete" />
+            <Button fx:id="updateIssue" mnemonicParsing="false" onAction="#updateIssue" text="Update" />
          </children>
       </HBox>
-      <Label fx:id="messageBar" layoutX="176.0" layoutY="14.0" prefHeight="49.0" prefWidth="206.0" />
+      <Label fx:id="messageBar" layoutX="102.0" layoutY="11.0" prefHeight="49.0" prefWidth="206.0" />
       <ImageView fitHeight="49.0" fitWidth="169.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@images/images.png" />

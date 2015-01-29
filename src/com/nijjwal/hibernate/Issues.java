@@ -15,7 +15,7 @@ import javax.persistence.TemporalType;
 @Table (name = "Project_Issues")
 public class Issues {
 
-	
+	//Properties
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
 	private int project_id;
 	
@@ -29,7 +29,7 @@ public class Issues {
 	@Column(name="Issue_Entered_On", nullable=false)
 	private Date issue_entered_on;
 	
-
+	
 	public int getProject_id() {
 		return project_id;
 	}
